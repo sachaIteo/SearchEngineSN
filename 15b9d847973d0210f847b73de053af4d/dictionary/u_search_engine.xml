@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="a5cd78c797bd0210f847b73de053afe7" label="Search Engine" max_length="40" name="u_search_engine" type="collection">
+        <element attributes="=extended_operators=VALCHANGES;CHANGESFROM;CHANGESTO" default="u_dummy_fieldLIKE^EQ" dependent="u_table" dependent_on_field="u_table" label="Condition" max_length="4000" name="u_condition2" type="conditions" use_dependent_field="true"/>
+        <element label="Field Type Name" max_length="50" name="u_field_type_name" reference="sys_glide_object" reference_key="name" reference_qual="visible=true^EQ" reference_qual_condition="visible=true^EQ" type="glide_list"/>
+        <element display="true" label="Name" max_length="50" name="u_name" type="string"/>
+        <element default="u_filter_builder" label="table" max_length="80" name="u_table" read_only="true" type="table_name"/>
+    </element>
+</database>

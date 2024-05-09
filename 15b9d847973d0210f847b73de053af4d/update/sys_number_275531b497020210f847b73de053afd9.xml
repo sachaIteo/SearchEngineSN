@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="u_search_engine_results">u_search_engine_results</category>
+        <maximum_digits>4</maximum_digits>
+        <number>1000</number>
+        <prefix>RESULT</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-06 07:02:13</sys_created_on>
+        <sys_id>275531b497020210f847b73de053afd9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>RESULT</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</sys_scope>
+        <sys_update_name>sys_number_275531b497020210f847b73de053afd9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-09 12:07:57</sys_updated_on>
+    </sys_number>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</claim_owner_scope>
+        <claim_timestamp>18f5d40c7280000001</claim_timestamp>
+        <metadata_update_name>sys_number_275531b497020210f847b73de053afd9</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Search Engine</previous_claim_name>
+        <previous_claim_scope>15b9d847973d0210f847b73de053af4d</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-09 12:07:57</sys_created_on>
+        <sys_id>3948da7597c20210f847b73de053afb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-09 12:07:57</sys_updated_on>
+    </sys_claim>
+</record_update>

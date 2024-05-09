@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="u_search_engine">null<item endquery="false" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>Hide table</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-06 06:57:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7644f53497020210f847b73de053affd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Hide table</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</sys_scope>
+        <sys_update_name>sys_ui_policy_7644f53497020210f847b73de053affd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-09 12:08:00</sys_updated_on>
+        <table>u_search_engine</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</claim_owner_scope>
+        <claim_timestamp>18f5d40d0e40000001</claim_timestamp>
+        <metadata_update_name>sys_ui_policy_7644f53497020210f847b73de053affd</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Search Engine</previous_claim_name>
+        <previous_claim_scope>15b9d847973d0210f847b73de053af4d</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-09 12:07:59</sys_created_on>
+        <sys_id>6a481e7597c20210f847b73de053af87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-09 12:07:59</sys_updated_on>
+    </sys_claim>
+</record_update>

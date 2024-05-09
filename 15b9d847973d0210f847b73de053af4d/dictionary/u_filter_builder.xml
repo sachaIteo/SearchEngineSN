@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c8ad55d797fd4210f847b73de053aff8" label="Filter builder" max_length="40" name="u_filter_builder" type="collection">
+        <element label="Dummy field" max_length="40" name="u_dummy_field" type="string"/>
+    </element>
+</database>

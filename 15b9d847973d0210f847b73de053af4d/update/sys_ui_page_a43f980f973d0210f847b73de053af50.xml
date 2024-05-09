@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[var emptyOption = {
+	html: 'None',
+	value: '',
+	selected: true
+};
+//$j("#fieldType").append($j("#fieldType").append($j("<option>", emptyOption)));
+
+loadFieldTypes();
+
+function buildAjax(scriptInclude, functionName, paramMap){
+	var ajaxCall = new GlideAjax(scriptInclude);
+	ajaxCall.addParam("sysparm_name", functionName);
+	if (paramMap)
+		for (param in paramMap)
+			ajaxCall.addParam("sysparm_"+param, paramMap[param]);
+	return ajaxCall;
+		
+}
+
+function loadFieldTypes(){
+	var fieldTypeSelect = $j("#fieldType");
+	buildAjax("swe_searchEngine", "getFieldTypes").getXMLAnswer(function(answer){
+		var options = answer.split(",$");
+		alert(options);
+		for (var i=0;i<options.length;i++){
+			$j("#fieldType").append($j("#fieldType").append($j("<option>", {
+				html:options[i], 
+				value:'', 
+				selected:true
+			})));
+		}
+	});
+	
+}
+function run(){
+	alert("ran");
+}
+
+function goBack(){
+	window.history.back();
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint/>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<button class="btn btn-default icon-chevron-left navbar-btn" title="${gs.getMessage('Back')}" onclick="goBack();"></button>
+	<span>Field Type :
+		<select id="fieldType" class="form-control select2" name="dir_choicelist"></select>
+	</span>
+	<button class="btn btn-default navbar-btn" title="test" onclick="run();">Run</button>
+</j:jelly>]]></html>
+        <name>Search Platform</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-30 14:15:45</sys_created_on>
+        <sys_id>a43f980f973d0210f847b73de053af50</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>Search Platform</sys_name>
+        <sys_package display_value="Search Engine" source="15b9d847973d0210f847b73de053af4d">15b9d847973d0210f847b73de053af4d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</sys_scope>
+        <sys_update_name>sys_ui_page_a43f980f973d0210f847b73de053af50</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-30 16:13:28</sys_updated_on>
+    </sys_ui_page>
+</record_update>

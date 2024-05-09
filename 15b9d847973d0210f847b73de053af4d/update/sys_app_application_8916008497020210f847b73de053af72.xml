@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>Results</name>
+        <order>100</order>
+        <roles>u_results_user</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-03 14:59:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8916008497020210f847b73de053af72</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Results</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</sys_scope>
+        <sys_update_name>sys_app_application_8916008497020210f847b73de053af72</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-09 12:07:56</sys_updated_on>
+        <title>Results</title>
+        <view_name/>
+    </sys_app_application>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</claim_owner_scope>
+        <claim_timestamp>18f5d40c1ac0000001</claim_timestamp>
+        <metadata_update_name>sys_app_application_8916008497020210f847b73de053af72</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Search Engine</previous_claim_name>
+        <previous_claim_scope>15b9d847973d0210f847b73de053af4d</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-09 12:07:56</sys_created_on>
+        <sys_id>a548da7597c20210f847b73de053af3b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-09 12:07:56</sys_updated_on>
+    </sys_claim>
+</record_update>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-03 14:59:50</sys_created_on>
+        <sys_id>d916008497020210f847b73de053af8a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>u_search_engine_results.u_results_user</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</sys_scope>
+        <sys_security_acl display_value="u_search_engine_results">dd16008497020210f847b73de053af87</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_d916008497020210f847b73de053af8a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-09 12:07:50</sys_updated_on>
+        <sys_user_role display_value="u_results_user" name="u_results_user">8d16804497020210f847b73de053aff4</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</claim_owner_scope>
+        <claim_timestamp>18f5d40adba0000001</claim_timestamp>
+        <metadata_update_name>sys_security_acl_role_d916008497020210f847b73de053af8a</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Search Engine</previous_claim_name>
+        <previous_claim_scope>15b9d847973d0210f847b73de053af4d</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-09 12:07:50</sys_created_on>
+        <sys_id>9c485a7597c20210f847b73de053afcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-09 12:07:50</sys_updated_on>
+    </sys_claim>
+</record_update>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>u_table</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-06 06:57:19</sys_created_on>
+        <sys_id>9f54793497020210f847b73de053afd8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>u_table</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</sys_scope>
+        <sys_update_name>sys_ui_policy_action_9f54793497020210f847b73de053afd8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-09 12:07:49</sys_updated_on>
+        <table>u_search_engine</table>
+        <ui_policy display_value="Hide table">7644f53497020210f847b73de053affd</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</claim_owner_scope>
+        <claim_timestamp>18f5d40a79a0000001</claim_timestamp>
+        <metadata_update_name>sys_ui_policy_action_9f54793497020210f847b73de053afd8</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Search Engine</previous_claim_name>
+        <previous_claim_scope>15b9d847973d0210f847b73de053af4d</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-09 12:07:49</sys_created_on>
+        <sys_id>0c485a7597c20210f847b73de053af38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-09 12:07:49</sys_updated_on>
+    </sys_claim>
+</record_update>

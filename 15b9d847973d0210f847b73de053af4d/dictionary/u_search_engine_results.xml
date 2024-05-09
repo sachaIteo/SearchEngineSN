@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="f485cc0497020210f847b73de053af60" label="Results" max_length="40" name="u_search_engine_results" type="collection">
+        <element default="javascript:getNextObjNumberPadded();" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Number" max_length="10" name="u_number" type="string" use_dynamic_default="true"/>
+        <element label="Parent" max_length="32" name="u_parent" reference="u_search_engine" type="reference"/>
+        <element label="Process end" max_length="40" name="u_process_end" type="glide_date_time"/>
+        <element label="Process start" max_length="40" name="u_process_start" type="glide_date_time"/>
+        <index name="index">
+            <element name="u_parent"/>
+        </index>
+    </element>
+</database>

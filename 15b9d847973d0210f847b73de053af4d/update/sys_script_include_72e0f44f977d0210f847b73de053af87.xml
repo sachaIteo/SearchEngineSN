@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.swe_searchEngine</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>swe_searchEngine</name>
+        <script><![CDATA[var swe_searchEngine = Class.create();
+swe_searchEngine.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    type: 'swe_searchEngine',
+    getFieldTypes: function() {
+        var fieldTypes = [];
+        var grFieldTypes = new GlideRecord("sys_glide_object");
+        grFieldTypes.addQuery("visible!=false");
+        grFieldTypes.query();
+        while (grFieldTypes.next())
+            fieldTypes.push(grFieldTypes.label + "");
+
+        return fieldTypes.join(",$");
+    },
+
+    getResults: function(fieldName, searchQuery) {
+        var excludeTemp = new RegExp("_[a-z0-9]{32}");
+        var tables = [];
+        var grFields = new GlideRecord("sys_dictionary");
+        var result = [];
+        grFields.addQuery("internal_typeIN" + fieldName);
+		gs.log("SWE : query = " + grFields.getEncodedQuery());
+        grFields.query();
+
+        var accept = false;
+        while (grFields.next()) {
+            accept = !(excludeTemp.exec(grFields.name + ""));
+            if (accept)
+                tables.push({
+					"tableName":grFields.name + "", 
+					"fieldName":grFields.element + "",
+					"fieldType":grFields.internal_type+""
+				});
+        }
+        for (var i = 0; i < tables.length; i++) {
+
+            var table = tables[i];
+
+            var grTable = new GlideRecord(table.tableName);
+            if (grTable.canRead() && grTable.isValid() && grTable.canWrite()) {
+                grTable.addQuery(searchQuery.replace("u_dummy_field", table.fieldName));
+                grTable.query();
+                while (grTable.next()) {
+                    result.push({
+                        "fieldName": table.fieldName + "",
+                        "object": grTable.sys_id + "",
+						"tableName": table.tableName + "",
+						"fieldType": table.fieldType
+                    });
+                }
+            }
+
+        }
+
+        return result;
+    },
+
+    createEntries: function(resultArr, searchEngineID) {
+        try {
+            var grResult = new GlideRecord("u_search_engine_results");
+            grResult.initialize();
+			grResult.u_process_start = new GlideDateTime();
+			grResult.u_parent = searchEngineID;
+            var parent = grResult.insert();
+
+
+            var grEntries = new GlideRecord("u_search_engine_entry");
+            for (i in resultArr) {
+                grEntries.initialize();
+                grEntries.u_servicenow_object = resultArr[i].object;
+                grEntries.u_field_name = resultArr[i].fieldName;
+				grEntries.u_table = resultArr[i].tableName;
+				grEntries.u_field_type = resultArr[i].fieldType;
+                grEntries.u_parent = parent;
+                grEntries.insert();
+            }
+
+			grResult.u_process_end = new GlideDateTime();
+			grResult.update();
+            return grResult;
+        } catch (e) {
+            gs.error("Exception in creating entries : " + e.message);
+			return e.message;
+        }
+    }
+
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-30 15:41:10</sys_created_on>
+        <sys_id>72e0f44f977d0210f847b73de053af87</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>swe_searchEngine</sys_name>
+        <sys_package display_value="Search Engine" source="15b9d847973d0210f847b73de053af4d">15b9d847973d0210f847b73de053af4d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</sys_scope>
+        <sys_update_name>sys_script_include_72e0f44f977d0210f847b73de053af87</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-06 13:59:12</sys_updated_on>
+    </sys_script_include>
+</record_update>

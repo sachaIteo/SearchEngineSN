@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Captures the last execution timestamp of the scheduled job 'Surface New Unconnected Content of Categories'</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>taxonomy.category.new_content_job_last_run</name>
+        <read_roles/>
+        <suffix/>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-08 07:43:25</sys_created_on>
+        <sys_id>63f1a53377451110cd1b756f1b5a9991</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>taxonomy.category.new_content_job_last_run</sys_name>
+        <sys_package display_value="Content Taxonomy" source="com.snc.taxonomy">847cf8397d35311076daf29f52070dfd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</sys_scope>
+        <sys_update_name>sys_properties_63f1a53377451110cd1b756f1b5a9991</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-09 12:07:48</sys_updated_on>
+        <type>date_format</type>
+        <value>2024-05-05</value>
+        <write_roles>maint</write_roles>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=63f1a53377451110cd1b756f1b5a9991"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</claim_owner_scope>
+        <claim_timestamp>18f5d40a5810000001</claim_timestamp>
+        <metadata_update_name>sys_properties_63f1a53377451110cd1b756f1b5a9991</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Search Engine</previous_claim_name>
+        <previous_claim_scope>15b9d847973d0210f847b73de053af4d</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-09 12:07:48</sys_created_on>
+        <sys_id>bf385a7597c20210f847b73de053af2d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-09 12:07:48</sys_updated_on>
+    </sys_claim>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</claim_owner_scope>
+        <claim_timestamp>18f5d40a57f0000001</claim_timestamp>
+        <metadata_update_name>sys_properties_63f1a53377451110cd1b756f1b5a9991</metadata_update_name>
+        <previous_claim_app_version/>
+        <previous_claim_name>com.snc.taxonomy</previous_claim_name>
+        <previous_claim_scope>com.snc.taxonomy</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-09 12:07:48</sys_created_on>
+        <sys_id>73385a7597c20210f847b73de053af2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-09 12:07:48</sys_updated_on>
+    </sys_claim>
+</record_update>

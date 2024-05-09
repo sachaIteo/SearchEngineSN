@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="54568c0497020210f847b73de053afe3" label="Entry" max_length="40" name="u_search_engine_entry" type="collection">
+        <element dependent="u_table" dependent_on_field="u_table" display="true" label="Field name" max_length="80" name="u_field_name" type="field_name" use_dependent_field="true"/>
+        <element label="Field type" max_length="32" name="u_field_type" reference="sys_glide_object" reference_qual="visible=true^EQ" reference_qual_condition="visible=true^EQ" type="reference"/>
+        <element label="Parent" max_length="32" name="u_parent" reference="u_search_engine_results" type="reference"/>
+        <element dependent="u_table" dependent_on_field="u_table" label="ServiceNow object" max_length="32" name="u_servicenow_object" type="document_id" use_dependent_field="true"/>
+        <element label="table" max_length="80" name="u_table" type="table_name"/>
+        <index name="index">
+            <element name="u_field_type"/>
+        </index>
+        <index name="index2">
+            <element name="u_parent"/>
+        </index>
+        <index name="index3">
+            <element name="u_servicenow_object"/>
+        </index>
+    </element>
+</database>
