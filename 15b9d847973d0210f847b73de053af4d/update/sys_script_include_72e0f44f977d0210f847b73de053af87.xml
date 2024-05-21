@@ -11,6 +11,14 @@
 swe_searchEngine.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
     type: 'swe_searchEngine',
+
+	//Search for an encoded query in every field of type fieldType on the platform
+	//returns a glideRecord of the results found (u_search_engine_results record)
+	findByFieldType:function(fieldType, searchQuery, searchEngineID){
+		return this.createEntries(this.getResults(fieldType, searchQuery), searchEngineID);
+	},
+
+	//HELPER : retrieves all fieldTypes
     getFieldTypes: function() {
         var fieldTypes = [];
         var grFieldTypes = new GlideRecord("sys_glide_object");
@@ -22,12 +30,16 @@ swe_searchEngine.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
         return fieldTypes.join(",$");
     },
 
-    getResults: function(fieldName, searchQuery) {
+	//builds an array for the results of a search based on fieldType
+	//Input : fieldType --> name of the field type to search for
+	//        searchQuery --> encoded query of the search, since we don't know how the fields are named, dummy_field is the placeholder for futur fields of type fieldType
+	//Output : An array of object that contains information for each result
+    getResults: function(fieldType, searchQuery) {
         var excludeTemp = new RegExp("_[a-z0-9]{32}");
         var tables = [];
         var grFields = new GlideRecord("sys_dictionary");
         var result = [];
-        grFields.addQuery("internal_typeIN" + fieldName);
+        grFields.addQuery("internal_typeIN" + fieldType);
 		gs.log("SWE : query = " + grFields.getEncodedQuery());
         grFields.query();
 
@@ -64,6 +76,7 @@ swe_searchEngine.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
         return result;
     },
 
+	//Creates the entries based on the results found for a search based on fieldType
     createEntries: function(resultArr, searchEngineID) {
         try {
             var grResult = new GlideRecord("u_search_engine_results");
@@ -98,13 +111,13 @@ swe_searchEngine.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-04-30 15:41:10</sys_created_on>
         <sys_id>72e0f44f977d0210f847b73de053af87</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>swe_searchEngine</sys_name>
         <sys_package display_value="Search Engine" source="15b9d847973d0210f847b73de053af4d">15b9d847973d0210f847b73de053af4d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Search Engine">15b9d847973d0210f847b73de053af4d</sys_scope>
         <sys_update_name>sys_script_include_72e0f44f977d0210f847b73de053af87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-06 13:59:12</sys_updated_on>
+        <sys_updated_on>2024-05-21 10:13:00</sys_updated_on>
     </sys_script_include>
 </record_update>
